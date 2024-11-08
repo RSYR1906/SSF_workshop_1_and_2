@@ -1,0 +1,30 @@
+/* Styling for the input container to align text box and button */
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+/* Styling for the text input box */
+.input-container input {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px; /* Space between input and button */
+    width: 100%; /* Full width of the container */
+    max-width: 400px; /* Set maximum width */}
+
+/* Styling for the generate button */
+.input-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.input-container button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generated Numbers</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Generated Numbers:</h1>
+  
+  <ul>
+    <li th:each="number : ${randomNumbers}" th:text="${number}">Number</li>
+  </ul>
+
+  <a href="/">Go back</a> <!-- Link back to the home page -->
+</body>
+</html>
