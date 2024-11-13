@@ -1,18 +1,46 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Generated Numbers</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <h1>Generated Numbers:</h1>
-  
-  <ul>
-    <li th:each="number : ${randomNumbers}" th:text="${number}">Number</li>
-  </ul>
+  <html lang="en" data-bs-theme="dark">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Generated Numbers</title>
+      <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+      <h1>Randomly Generated Numbers:</h1>
 
-  <a href="/">Go back</a> <!-- Link back to the home page -->
-</body>
+      <div class="image-container">
+        <ul>
+          <li data-th-each="number : ${randomNumbers}">
+            <img
+              data-th-if="${number lt 21}"
+              data-th-src="'http://www.janbrett.com/images/number' + ${number} + '.jpg'"
+              alt="Number Image"
+            />
+            <img
+              data-th-unless="${number le 21}"
+              data-th-src="'http://www.janbrett.com/images/number_' + ${number} + '.jpg'"
+              alt="Number Image"
+            />
+          </li>
+        </ul>
+      </div>
+
+      <!-- Button to download as PDF -->
+      <div class="pdf-button">
+        <a href="/generateImage" target="_blank">
+          <button>Download as Image</button>
+        </a>
+      </div>
+      <br />
+
+      <!-- Button to go back to the home page -->
+      <div class="go-back-button">
+        <a href="/">
+          <button>Go back</button>
+        </a>
+      </div>
+    </body>
+  </html>
 </html>

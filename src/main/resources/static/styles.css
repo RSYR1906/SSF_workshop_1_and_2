@@ -1,4 +1,8 @@
 /* Styling for the input container to align text box and button */
+.invalid-message {
+  color: red;
+}
+
 .input-container {
     display: flex;
     align-items: center;
@@ -28,3 +32,25 @@
 .input-container button:hover {
     background-color: #45a049; /* Darker green on hover */
 }
+
+.image-container ul {
+    padding: 0;
+    margin: 0;
+    display: flex;           /* Make the container a flexbox */
+    flex-wrap: wrap;         /* Allow wrapping to new lines */
+    gap: 10px;               /* Space between images */
+  }
+  
+  .image-container ul li {
+    display: inline-block;   /* Ensure list items are inline */
+  }
+  
+  .image-container img {
+    width: 200px;             /* Set a width for images */
+    height: auto;            /* Maintain aspect ratio */
+  }
+
+  .pdf-button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
